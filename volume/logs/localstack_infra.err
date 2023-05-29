@@ -1,0 +1,1024 @@
+2023-05-29T13:57:03.996  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2023-05-29T13:57:03.996  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2023-05-29T13:57:03.999  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2023-05-29T13:57:03.999  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2023-05-29T13:57:18.037  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T13:57:18.105  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock Kinesis service on http port 4566 ...
+2023-05-29T13:57:18.297  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-blocker-14] INFO  2023-05-29 13:57:18,296 k.m.KinesisMockService contextId=b9846398-fe28-11ed-9b13-db4faa162d9c, cacheConfig={"awsAccountId":"000000000000","awsRegion":"us-east-1","createStreamDuration":{"length":500,"unit":"MILLISECONDS"},"deleteStreamDuration":{"length":500,"unit":"MILLISECONDS"},"deregisterStreamConsumerDuration":{"length":500,"unit":"MILLISECONDS"},"initializeStreams":null,"mergeShardsDuration":{"length":500,"unit":"MILLISECONDS"},"onDemandStreamCountLimit":10,"persistConfig":{"fileName":"000000000000.json","interval":{"length":5,"unit":"SECONDS"},"loadIfExists":true,"path":"/var/lib/localstack/tmp/state/kinesis","shouldPersist":true},"registerStreamConsumerDuration":{"length":500,"unit":"MILLISECONDS"},"shardLimit":100,"splitShardDuration":{"length":500,"unit":"MILLISECONDS"},"startStreamEncryptionDuration":{"length":500,"unit":"MILLISECONDS"},"stopStreamEncryptionDuration":{"length":500,"unit":"MILLISECONDS"},"updateShardCountDuration":{"length":500,"unit":"MILLISECONDS"}} - Logging Cache Config
+2023-05-29T13:57:18.407  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-blocker-17] INFO  2023-05-29 13:57:18,407 k.m.KinesisMockService  - Starting Kinesis TLS Mock Service on port 59453
+2023-05-29T13:57:18.408  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-blocker-17] INFO  2023-05-29 13:57:18,407 k.m.KinesisMockService  - Starting Kinesis Plain Mock Service on port 45141
+2023-05-29T13:57:18.408  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-13] INFO  2023-05-29 13:57:18,407 k.m.KinesisMockService contextId=b9955389-fe28-11ed-9b13-db4faa162d9c - Starting persist data loop
+2023-05-29T13:57:18.623  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:02:51.978  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:02:51.985  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-10] WARN  2023-05-29 14:02:51,985 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=8069231f-fe29-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=8069231e-fe29-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T14:02:51.985  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T14:02:51.985  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:02:51.986  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:02:51.987  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T14:05:13.423  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:05:13.432  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:05:15.010  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:05:17.100  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:08:49.540  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:08:49.550  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:08:51.272  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:08:52.851  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:13:46.529  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:13:46.538  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:13:47.771  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:14:15.938  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:14:15.947  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:16:05.906  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:16:05.914  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-5] WARN  2023-05-29 14:16:06,620 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=5a0cd0e5-fe2b-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=5a0cd0e4-fe2b-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:16:06.620  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:16:06.622  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T14:16:07.218  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:16:09.007  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:16:21.628  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:16:21.636  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:16:23.215  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:16:23.660  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:20:19.602  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:20:19.611  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:20:22.680  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:20:23.408  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:21:35.451  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-3] WARN  2023-05-29 14:21:35,458 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=1e0d8357-fe2c-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=1e0d8356-fe2c-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:21:35.458  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:21:35.460  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T14:21:36.175  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:21:36.999  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:21:55.660  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-1] WARN  2023-05-29 14:21:55,667 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2a19507d-fe2c-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=2a19507c-fe2c-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:21:55.668  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:21:55.669  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T14:21:56.406  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:21:57.741  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:22:34.935  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:22:34.943  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:22:36.094  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:22:54.637  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:22:54.646  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:22:55.787  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:23:04.867  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:23:04.875  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:24:36.903  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:24:36.912  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:24:38.782  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:25:08.463  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:25:08.472  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:25:10.153  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:25:10.166  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-1] WARN  2023-05-29 14:25:13,202 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=9fd69c77-fe2c-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=9fd69c76-fe2c-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:25:13.202  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:25:13.204  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:25:20.782  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:25:20.791  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-11] WARN  2023-05-29 14:25:21,778 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=a4f3347b-fe2c-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=a4f3347a-fe2c-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:25:21.778  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:25:21.779  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:25:21.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:25:23.588  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:25:27.639  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:25:27.647  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:25:28.316  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:25:28.329  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:25:31.873  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:04.958  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:26:04.966  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:26:25.105  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:26:25.113  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:26.112  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:26:28.066  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:28.961  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:26:29.936  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:33.087  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:26:33.095  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:33.722  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:26:49.428  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:26:49.436  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:26:50.396  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:26:51.170  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:26:51.182  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:27.955  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:27:27.963  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:29.035  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:27:29.977  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:30.694  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:27:30.706  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:44.787  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:27:44.794  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-15] WARN  2023-05-29 14:27:44,794 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=fa31de39-fe2c-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=fa31de38-fe2c-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:27:44.795  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:27:44.796  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:27:46.333  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:46.861  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:27:47.926  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:27:48.628  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:27:48.640  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:28:27.305  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:28:27.314  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:28:29.336  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:28:30.322  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:28:31.064  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:28:31.075  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:29:04.034  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:29:04.043  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:29:05.813  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:29:06.333  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:29:07.251  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:29:08.471  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:29:08.483  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:29:11.416  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-1] WARN  2023-05-29 14:29:11,423 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2dd4409b-fe2d-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=2dd4409a-fe2d-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:29:11.423  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:29:11.425  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-12] WARN  2023-05-29 14:29:13,152 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2edc13ad-fe2d-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=2edc13ac-fe2d-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:29:13.152  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:29:13.153  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:29:13.153  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:29:13.153  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:29:13.153  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:29:13.154  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-6] WARN  2023-05-29 14:29:13,660 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2f29976f-fe2d-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=2f29976e-fe2d-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:29:13.660  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:29:13.662  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-3] WARN  2023-05-29 14:29:13,824 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2f429db1-fe2d-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=2f429db0-fe2d-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:29:13.824  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:29:13.826  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:29:14.373  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:30:25.713  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:30:25.722  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:30:26.539  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:30:27.687  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:30:29.180  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:30:49.430  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:30:49.439  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:31:51.292  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:31:51.301  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:31:51.489  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:31:52.367  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:31:53.112  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:31:53.673  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:31:53.686  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:32:22.867  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:32:22.876  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:32:23.778  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:32:24.677  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:32:26.556  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:32:26.567  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:32:26.579  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:01.469  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-1] WARN  2023-05-29 14:34:01,475 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=dab6d417-fe2d-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=dab6d416-fe2d-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:34:01.476  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:34:01.477  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:34:02.938  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:34:03.869  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:05.298  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:34:05.310  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:33.421  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:34:33.430  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:34.267  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:34:35.134  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:35.959  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:34:35.969  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:34:38.874  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:34:38.883  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:37:25.330  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:37:25.339  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:37:26.097  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:37:27.093  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:37:28.696  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T14:37:28.708  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:37:30.488  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-12] WARN  2023-05-29 14:37:30,495 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=574c98e7-fe2e-11ed-9b13-db4faa162d9c, action=DeleteStream, contextId=574c98e6-fe2e-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Deleting stream was unuccessful
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Stream arn arn:aws:kinesis:us-east-1:000000000000:stream/test-stream not found
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.$anonfun$findStream$1(CommonValidations.scala:72)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.Option.toRight(Option.scala:593)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findStream(CommonValidations.scala:72)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$3(DeleteStreamRequest.scala:33)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$2(DeleteStreamRequest.scala:31)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.DeleteStreamRequest.$anonfun$deleteStream$1(DeleteStreamRequest.scala:28)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:37:30.495  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:37:30.497  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 400 (ResourceNotFoundException)
+2023-05-29T14:37:31.863  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:42:46.991  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:42:47.000  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T14:42:47.962  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:42:49.834  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:44:17.900  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:44:17.909  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:44:18.512  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T14:46:00.214  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:46:00.223  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:46:05.704  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:46:05.715  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T14:56:24.732  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:56:24.740  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-15] WARN  2023-05-29 14:56:26,302 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=fc4afdeb-fe30-11ed-9b13-db4faa162d9c, action=GetShardIterator, contextId=fc4afdea-fe30-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Getting the shard iterator was unuccessful
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Could not find shardId 1 in stream test-stream
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findShard(CommonValidations.scala:319)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$4(GetShardIteratorRequest.scala:58)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$3(GetShardIteratorRequest.scala:36)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$2(GetShardIteratorRequest.scala:33)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$1(GetShardIteratorRequest.scala:30)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:337)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:56:26.302  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:56:26.304  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 400 (ResourceNotFoundException)
+2023-05-29T14:56:34.468  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:56:34.476  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-15] WARN  2023-05-29 14:56:35,135 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=018ef40f-fe31-11ed-9b13-db4faa162d9c, action=GetShardIterator, contextId=018ef40e-fe31-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Getting the shard iterator was unuccessful
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Could not find shardId 0 in stream test-stream
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findShard(CommonValidations.scala:319)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$4(GetShardIteratorRequest.scala:58)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$3(GetShardIteratorRequest.scala:36)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$2(GetShardIteratorRequest.scala:33)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$1(GetShardIteratorRequest.scala:30)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:337)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:56:35.136  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:56:35.137  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 400 (ResourceNotFoundException)
+2023-05-29T14:56:41.555  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:56:41.564  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-7] WARN  2023-05-29 14:56:42,411 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=05e52ed3-fe31-11ed-9b13-db4faa162d9c, action=GetShardIterator, contextId=05e52ed2-fe31-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Getting the shard iterator was unuccessful
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceNotFoundException: Could not find shardId 0 in stream test-stream
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.validations.CommonValidations$.findShard(CommonValidations.scala:319)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$4(GetShardIteratorRequest.scala:58)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$3(GetShardIteratorRequest.scala:36)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$2(GetShardIteratorRequest.scala:33)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at scala.util.Either.flatMap(Either.scala:352)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.GetShardIteratorRequest.$anonfun$getShardIterator$1(GetShardIteratorRequest.scala:30)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:337)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T14:56:42.412  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T14:56:42.413  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 400 (ResourceNotFoundException)
+2023-05-29T14:56:50.675  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:56:50.684  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T14:57:26.524  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:57:26.532  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T14:59:07.823  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T14:59:07.832  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:00:02.135  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:00:02.144  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:04:18.028  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:04:18.037  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:04:18.058  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:04:18.227  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:04:18.352  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:04:24.420  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:04:24.428  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T15:04:26.975  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:04:30.217  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:04:30.226  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.240  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.253  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.267  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.280  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.346  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.359  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.371  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.426  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.439  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.452  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.506  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.518  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.530  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.595  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.608  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.623  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.677  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.689  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.702  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.756  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.768  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.845  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.858  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.871  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.926  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.938  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:30.951  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.016  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.028  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.041  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.096  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.108  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.121  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.176  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.188  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.201  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.255  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.268  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.280  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.336  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.348  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.360  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.415  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.427  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.440  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.495  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.508  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.521  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.576  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.589  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.601  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.657  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.669  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.682  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.736  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.748  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.761  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.826  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.838  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.850  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.906  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.920  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.933  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.986  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:31.998  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.010  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.066  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.079  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.092  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.149  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.162  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.176  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.240  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.252  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.264  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.316  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.328  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.341  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.396  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.409  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.421  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.476  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.488  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.500  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.556  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.568  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.580  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.636  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.648  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.662  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.726  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.740  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.752  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.815  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.828  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.840  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.896  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.908  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.920  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.986  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:32.998  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.010  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.068  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.080  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.093  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.147  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.160  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.176  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.237  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.251  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.266  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.327  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.341  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.356  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.417  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.433  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.447  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.508  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.522  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.537  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.596  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.608  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.621  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.679  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.691  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.703  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.756  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.768  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.837  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.849  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.861  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.916  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.928  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.940  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:33.996  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.008  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.021  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.076  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.088  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.100  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.166  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.177  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.192  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.246  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.258  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.271  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.326  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.338  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.350  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.415  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.427  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.439  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.496  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.508  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.522  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.578  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.592  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.605  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.666  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.678  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.690  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.754  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.767  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.780  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.792  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.845  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.858  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.870  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.935  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.948  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:34.960  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.016  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.028  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.040  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.105  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.118  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.131  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.187  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.200  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.215  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.270  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:04:35.285  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.298  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.310  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.365  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.378  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.390  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.446  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.458  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.472  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.526  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.539  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.552  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.610  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.622  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.635  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.696  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.708  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.725  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.786  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.800  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.813  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.876  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.888  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.901  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.955  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.967  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:35.980  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.036  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.050  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.062  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.116  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.128  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.140  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.196  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.209  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.222  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.282  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.295  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.308  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.320  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.375  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.388  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.400  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.456  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.468  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.487  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.545  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.559  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.572  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.626  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.638  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.651  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.706  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.718  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.730  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.786  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.798  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.811  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.865  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.878  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.891  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.949  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.962  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:36.974  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.026  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.040  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.052  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.106  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.118  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.131  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.186  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.199  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.212  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.266  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.280  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.293  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.346  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.360  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.372  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.426  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.438  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.451  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:04:37.508  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:47.630  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:06:47.638  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:06:49.016  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.030  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.045  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.057  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.116  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.129  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.142  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.196  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.208  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.221  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.276  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.288  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.305  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.366  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.378  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.391  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.446  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.462  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.474  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.526  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.538  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.552  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.607  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.620  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.632  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.686  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.699  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.711  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.766  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.779  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.792  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.864  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.876  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.889  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.946  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.958  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:49.972  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.031  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.043  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.057  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.071  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.125  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.139  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.151  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.215  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.228  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.240  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.296  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.308  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.321  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.376  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.388  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.401  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.456  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.477  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.491  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.547  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.560  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.573  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.636  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.648  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.665  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.730  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.743  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.757  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.770  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.836  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.849  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.862  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.916  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.928  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.942  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:50.999  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.012  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.026  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.086  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.098  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.110  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.167  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.179  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.191  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:06:51.250  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:08:27.149  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:08:27.158  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:08:27.939  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:08:27.953  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:08:27.967  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:08:27.981  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:09:05.397  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:09:05.405  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:09:06.085  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:10:26.072  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:10:26.080  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:10:28.255  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:10:31.080  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:10:31.089  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:14:26.927  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:14:26.936  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:14:27.989  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:22:06.774  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:22:06.783  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:22:11.568  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:22:12.773  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:22:12.783  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:23:20.603  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:23:20.613  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:23:21.624  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:23:32.460  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:23:32.470  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:23:32.559  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:23:32.585  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:23:32.983  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 500 (500)
+2023-05-29T15:23:36.227  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:23:37.315  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:24:40.882  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:24:40.892  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:24:41.571  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:25:08.364  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:25:08.373  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:25:09.050  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:25:37.325  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:25:37.334  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:25:38.001  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:26:24.228  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:26:24.237  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:26:25.035  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:26:49.683  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:26:49.691  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:26:50.336  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:26:59.607  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:26:59.616  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:27:03.532  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:27:06.199  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:27:06.208  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:27:07.772  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:27:08.334  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:28:06.889  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:28:06.898  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:28:07.452  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:28:54.267  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:28:54.276  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:28:54.761  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:29:24.888  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:29:24.899  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:29:25.755  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:30:12.991  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:30:13.001  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:30:14.049  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:31:43.653  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:31:43.662  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:31:44.228  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:33:07.142  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-4] WARN  2023-05-29 15:33:07,150 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=1c199b13-fe36-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=1c199b12-fe36-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T15:33:07.150  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T15:33:07.152  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T15:33:09.218  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T15:33:09.678  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T15:33:10.072  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T15:33:11.119  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T15:33:12.205  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:12.213  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.DeleteStream => 200
+2023-05-29T15:33:15.078  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T15:33:17.208  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 200
+2023-05-29T15:33:18.183  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:18.195  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.ListStreams => 200
+2023-05-29T15:33:21.663  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:33:23.228  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:23.236  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:33:31.257  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : [io-compute-9] WARN  2023-05-29 15:33:31,264 k.m.cache.Cache Access-Control-Expose-Headers=x-amzn-RequestId,x-amzn-ErrorType,x-amz-request-id,x-amz-id-2,x-amzn-ErrorMessage,Date, Access-Control-Allow-Origin=*, x-amzn-RequestId=2a796a69-fe36-11ed-9b13-db4faa162d9c, action=CreateStream, contextId=2a796a68-fe36-11ed-9b13-db4faa162d9c, contentType=application/x-amz-json-1.1, streamName=test-stream - Creating stream was unuccessful
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : kinesis.mock.ResourceInUseException: Stream test-stream already exists
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at kinesis.mock.api.CreateStreamRequest.$anonfun$createStream$1(CreateStreamRequest.scala:32)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.spin$4(SyncRef.scala:90)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.kernel.SyncRef.$anonfun$modify$1(SyncRef.scala:94)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.runLoop(IOFiber.scala:403)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.asyncContinueSuccessfulR(IOFiber.scala:1325)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.IOFiber.run(IOFiber.scala:119)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at cats.effect.unsafe.WorkerThread.run(WorkerThread.scala:585)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:705)
+2023-05-29T15:33:31.265  INFO --- [functhread12] l.s.k.kinesis_mock_server  : at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:202)
+2023-05-29T15:33:31.267  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.CreateStream => 400 (ResourceInUseException)
+2023-05-29T15:33:34.669  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:33:35.579  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:33:36.388  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:33:36.396  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.PutRecord => 200
+2023-05-29T15:33:37.212  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:33:38.105  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:23.915  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:34:23.923  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetShardIterator => 200
+2023-05-29T15:34:24.556  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.570  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.584  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.597  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.610  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.666  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.681  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.737  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.797  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.857  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.917  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:24.977  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.036  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.097  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.156  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.216  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.277  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.336  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.409  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.466  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.538  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.597  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.658  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.719  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.776  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.837  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.898  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:25.956  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.016  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.077  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.139  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.196  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.257  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.317  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.376  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.436  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.496  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.557  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.617  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.676  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.738  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.796  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.856  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.916  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:26.976  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.036  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.097  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.160  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.217  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.279  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.337  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.396  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.457  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.520  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.576  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.636  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.696  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.756  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.816  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.876  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.936  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:27.997  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.057  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.116  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.176  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.242  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.296  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.358  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.421  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.478  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.536  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.596  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.656  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.717  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.776  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.836  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.896  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:28.950  INFO --- [   asgi_gw_0] localstack.request.http    : OPTIONS / => 204
+2023-05-29T15:34:28.960  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.018  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.077  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.136  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.197  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.256  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.317  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.377  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.436  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.500  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.557  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.617  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.676  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.736  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.796  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.856  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.916  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:29.976  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.036  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.097  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.178  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.242  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.296  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
+2023-05-29T15:34:30.357  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS kinesis.GetRecords => 200
