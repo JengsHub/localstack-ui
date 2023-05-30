@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  background-color: white;
+  transition-duration: 0.4s;
+  padding: 5px;
+  border-radius: 3px;
+  border-width: 1px;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  /* Green */
+  color: white;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.text-box {
+  height: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  word-wrap: break-word;
+  justify-content: center;
+}
+
+.section {
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.text-input{
+  margin-left: 5px;
+  font-size: large;
+}
